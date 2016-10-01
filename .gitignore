@@ -1,0 +1,7 @@
+# vi
+*.swp
+*.swo
+
+# vagrant
+.vagrant
+*.box
