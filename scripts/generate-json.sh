@@ -38,7 +38,7 @@ cat << EOF > $NAME-v$VERSION.json
         "version": "$VERSION",
         "providers": [{
                 "name": "virtualbox",
-                "url": "file://$NAME-v$VERSION.box",
+                "url": "file://$(cd "$(dirname "$NAME-v$VERSION.box")"; pwd -P)/$(basename "$NAME-v$VERSION.box")",
                 "checksum_type": "sha256",
                 "checksum": "$SHA256SUM"
         }]
